@@ -1,0 +1,99 @@
+@use "./Frame-Os" as *;
+* {
+  @include star;
+}
+html {
+  scroll-behavior: smooth;
+}
+.carousel {
+  height: calc(100vh - 50px);
+  overflow: hidden;
+}
+.carousel-caption {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  h2 {
+    margin-bottom: 20px;
+  }
+  p {
+    width: 500px;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+.main-head {
+  width: fit-content;
+  margin: 30px auto;
+  margin-bottom: 70px;
+}
+.custom-btn {
+      width: 130px;
+      color: #fff;
+      border-radius: 30px;
+      padding: 16px 55px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 600;
+      font-size: 30px;
+      background: transparent;
+      transition: all 0.3s ease;
+      position: relative;
+      display: inline-block;
+       box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+       7px 7px 20px 0px rgba(0,0,0,.1),
+       4px 4px 5px 0px rgba(0,0,0,.1);
+      outline: none;
+    }
+
+.btn-11 {
+  border: none;
+  background: rgb(69, 33, 251);
+    background: linear-gradient(0deg, rgb(87, 33, 251) 0%, rgb(102, 76, 234) 100%);
+    color: #fff;
+    overflow: hidden;
+    width: fit-content;
+    margin: auto;
+}
+.btn-11:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 3s ease-in-out infinite;
+}
+@keyframes shiny-btn1 {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}
+
+
+.projects {
+  .card {
+    height: 300px;
+    img {
+      height: 65%;
+    }
+  }
+    background: #f1f1f1;
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 20px;
+    }
+}
+.tutorial {
+    background: #ffffff;
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 20px;
+    }
+  
+}
